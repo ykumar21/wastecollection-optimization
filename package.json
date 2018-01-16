@@ -1,0 +1,31 @@
+{
+  "name": "garbage",
+  "version": "1.0.0",
+  "description": "...",
+  "main": "app.js",
+  "scripts": {
+    "test": "electron .",
+    "build": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angds/access-software.git"
+  },
+  "author": "Shashwat Goel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angds/access-software/issues"
+  },
+  "homepage": "https://github.com/angds/access-software#readme",
+  "devDependencies": {
+    "electron": "^1.7.9",
+    "electron-builder": "^19.49.0"
+  },
+  "build": {
+    "appId": "com.shashpr0.garbage",
+    "mac": {
+      "category": "com.garbage.shashpr0.category.type"
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-family: 'Lato';
+	overflow-x: hidden;
+}
+
+body {
+	display: flex;
+	flex-direction: row;
+}
+
+#map { 
+	order: 1;
+	width: 35%;
+	height: 100%;
+	min-width: 300px; 
+}
+
+.main {
+	overflow-x: hidden;
+	order: 2;
+	width: 65%;
+	height: 100%;
+	padding-left: 20px;
+}
+
+.main h1 {
+	font-weight: 300;
+}
+
+.input {
+	margin: 30px;
+}
+.input-info {
+	font-size: 20px;
+	font-weight: 300;
+}
+input[type = "text"] {
+	outline: none;
+	width: 200px;
+	height: 35px;
+	margin-top: 10px;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+.marker-info {
+	margin: 30px;
+}
+.marker-img {
+	height: 40px;
+	margin-bottom: -10px;
+}
+.marker-num {
+	font-weight: 300;
+	font-size: 25px;
+	margin: 15px;
+}
+.marker-info-inputs {
+	margin: 20px;
+}
+.marker-info-input {
+	margin-top: 20px;
+}
+.marker-info-input input[type = "text"] {
+	outline: none;
+	width: 150px;
+	height: 25px;
+	margin-top: 10px;
+	font-size: 15px;
+	font-weight: 300;	
+}
+
+.truck-info {
+	margin: 30px;
+}
+.truck-img {
+	height: 40px;
+	margin-bottom: -10px;
+}
+.truck-num {
+	font-weight: 300;
+	font-size: 25px;
+	margin: 15px;
+}
+.truck-info-inputs {
+	margin: 20px;
+}
+.truck-info-input input[type = "text"] {
+	outline: none;
+	width: 150px;
+	height: 25px;
+	margin-top: 10px;
+	font-size: 15px;
+	font-weight: 300;	
+}
+.add-truck {
+	margin: 30px;
+}
+.add-icon {
+	border: 1px solid rgba(204, 204, 204, 1);
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	color: rgb(204,204, 204);
+}
+.add-icon .text {
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@media (max-width: 800px) {
+	.main {
+		left: 310px;
+	}
+}

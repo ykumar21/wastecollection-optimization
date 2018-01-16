@@ -7,10 +7,25 @@
 		<script src = "https://unpkg.com/sweetalert2@7.1.2/dist/sweetalert2.all.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 	</head>
-	<body>
+	<style media="screen">
 
+	.console-log-div {
+		border: 1px solid gray;
+		padding: 5px 10px;
+		border-radius: 5px;
+		width: 95% !important;
+		background-color: #efefef;
+	}
+	</style>
+	<body>
+	<script src="https://glebbahmutov.com/console-log-div/console-log-div.js"></script>
 		<div id="map"></div>
 		<div class="main">
+			<div class="outputscreen">
+				<div class="txt">
+
+				</div>
+			</div>
 			<h1>garbage</h1>
 			<i>Click on map to add site</i>
 			<div class="markers"></div>
@@ -28,4 +43,14 @@
 		async defer></script>
 
 	</body>
+	<script>
+	var textEl = document.getElementById('console-log-text');
+ if (!textEl) {
+	 throw new Error('cannot find text element');
+ }
+ var text = textEl.textContent;
+ if (text.indexOf('foo') === -1) {
+	 throw new Error('Cannot find text foo in ' + text);
+ }
+	</script>
 	</html>

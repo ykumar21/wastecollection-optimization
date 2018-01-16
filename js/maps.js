@@ -36,7 +36,91 @@ var colorArray = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6',
 function initMap() {
 	map = new google.maps.Map(document.getElementById('map'), {
 		center: saritaVihar,
-		zoom: 14
+		zoom: 14,
+		styles: [
+    {
+        "featureType": "landscape",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "stylers": [
+            {
+                "hue": "#00aaff"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "gamma": 2.15
+            },
+            {
+                "lightness": 12
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "lightness": 24
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 57
+            }
+        ]
+    }
+]
 	});
 
 	// Place markers on click
@@ -48,10 +132,17 @@ function initMap() {
 
 // Accepts markers parameters
 function placeMarker(position, map) {
+
+
 	var marker = new google.maps.Marker({
 		position: position,
 		map: map,
-		title: 'Garbage Can'
+		title: 'Garbage Can',
+		icon: {
+			 path: google.maps.SymbolPath.CIRCLE,
+			 strokeColor:colorArray[Math.floor(Math.random() * colorArray.length) + 1] ,
+			 scale: 3
+	 }
 	});
 	// map.panTo(position);
 
@@ -243,7 +334,7 @@ let dfs = (node) =>
 	for (let i = 0; i < sitelist[node].adj.length; i++) // Iterates over adjacent nodes for current node
 	{
 		let next = sitelist[node].adj[i].destination; // Candidate next node (taken in sorted order based on heuristic)
-		console.log("::" + next);
+
 		if (sitelist[next].visited !== true && currcap + sitelist[next].capacity <= trcap) // If candidate hasnt been visited and truck doesnt overflow
 		{
 			currt += sitelist[node].adj[i].timetaken; // Time of current node increased by the edgeweight
@@ -317,8 +408,8 @@ let build = () => {
 			dfs2(i); // Visit node to start routing
 			if (lastvisit !== -1) // If there is a last visit node to landfill path left add to time
 			{
-				lastvisit = -1; // Mark that there is no last visit to landfill left
-				rounds[rdcnt].tm += sitelist[lastvisit].tolfill; // Add time to current round's time.
+					rounds[rdcnt].tm += sitelist[lastvisit].tolfill; // Add time to current round's time.
+					lastvisit = -1; // Mark that there is no last visit to landfill left
 			}
 		}
 	}
@@ -361,7 +452,7 @@ let routingfunc = (n, m, lfill, trx, trcap, ...arr) => {
 	{
 		//console.log(k);
 		let val = compute(); // Compute value for current k
-		console.log('val = ' + val);
+
 		for (let i = 0; i < n; i++) sitelist[i].visited = false; // Mark all nodes as unvisited again
 		if (val < minT) // Update minimum time and optimal k if the current k gives a shorter time
 		{
@@ -373,7 +464,6 @@ let routingfunc = (n, m, lfill, trx, trcap, ...arr) => {
 
 	k = optK; // Set k to optimal K to rebuild solution and store final rounds, we didn't do this everytime earlier to save memory
 
-	console.log('lolk ' + k);
 
 	for (let i = 0; i < n; i++) sitelist[i].visited = false;
 	build(); // Call build function similar to compute but builds the final round system

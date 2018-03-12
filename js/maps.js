@@ -468,6 +468,9 @@ let routingfunc = (n, m, lfill, trx, trcap, ...arr) => {
 	for (let i = 0; i < n; i++) sitelist[i].visited = false;
 	build(); // Call build function similar to compute but builds the final round system
 	rounds = rounds.sort(rdsort); // Sort rounds in descending order for allocation to trucks (greedy)
+
+
+
 	for (let i = 0; i < rounds.length; i++) // Iterate over all rounds for printing what we have currently
 	{
 		console.log("Round: " + (i + 1) + "\n");
@@ -490,6 +493,8 @@ let routingfunc = (n, m, lfill, trx, trcap, ...arr) => {
 				mn = trucks[j].cumtm;
 			}
 		}
+
+		console.log(i);
 		trucks[mni].cumtm += rounds[i].tm; // For the finally chosen truck for this round, add the time of round to its cumalative
 		trucks[mni].rds.push(i); // Add the round to the trucks list of rounds.
 		trucks[mni].capserve += rounds[i].cap; // Add the round's total capacity collected to the truck's capacity servd

@@ -1,123 +1,183 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
 
-body, html {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	font-family: 'Lato';
-	overflow-x: hidden;
-}
 
-body {
-	display: flex;
-	flex-direction: row;
-}
 
-#map { 
-	order: 1;
-	width: 35%;
-	height: 100%;
-	min-width: 300px; 
+@font-face {
+	font-family: suir;
+	src: url('../suir.otf');
+
 }
 
 .main {
-	overflow-x: hidden;
-	order: 2;
-	width: 65%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 	height: 100%;
-	padding-left: 20px;
 }
 
-.main h1 {
-	font-weight: 300;
+.con {
+	border-top: 1px solid #eee;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0;
+	background: #333;
 }
 
-.input {
-	margin: 30px;
-}
-.input-info {
-	font-size: 20px;
-	font-weight: 300;
-}
-input[type = "text"] {
-	outline: none;
-	width: 200px;
-	height: 35px;
-	margin-top: 10px;
-	font-size: 20px;
-	font-weight: 300;
+#map {
+	position: absolute;
+	top: 0;
+	left:18%;
+	height: 100%;
+	width: 82%;
+
 }
 
-.marker-info {
-	margin: 30px;
+.opt {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 18%;
+	height: 66%;
+	top: 34%;
+	background: #fff;
 }
-.marker-img {
-	height: 40px;
-	margin-bottom: -10px;
-}
-.marker-num {
-	font-weight: 300;
-	font-size: 25px;
-	margin: 15px;
-}
-.marker-info-inputs {
-	margin: 20px;
-}
-.marker-info-input {
-	margin-top: 20px;
-}
-.marker-info-input input[type = "text"] {
-	outline: none;
-	width: 150px;
-	height: 25px;
-	margin-top: 10px;
-	font-size: 15px;
-	font-weight: 300;	
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 10%;
+	
 }
 
-.truck-info {
-	margin: 30px;
-}
-.truck-img {
-	height: 40px;
-	margin-bottom: -10px;
-}
-.truck-num {
-	font-weight: 300;
-	font-size: 25px;
-	margin: 15px;
-}
-.truck-info-inputs {
-	margin: 20px;
-}
-.truck-info-input input[type = "text"] {
-	outline: none;
-	width: 150px;
-	height: 25px;
-	margin-top: 10px;
-	font-size: 15px;
-	font-weight: 300;	
-}
-.add-truck {
-	margin: 30px;
-}
-.add-icon {
-	border: 1px solid rgba(204, 204, 204, 1);
-	border-radius: 100%;
-	width: 20px;
-	height: 20px;
-	display: inline-block;
-	color: rgb(204,204, 204);
-}
-.add-icon .text {
+.heading {
+	font-family: suir;
 	position: relative;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+	left:16%;
+	top: 6%;
+	font-size: 16px;	
+	letter-spacing: 0.3px;
+	font-weight: 600;
+	color: #404047;
+	text-transform: capitalize;
+}
+.sub {
+	position: absolute;
+	top: 6.73%;
+	font-family: suir;
+	font-weight: 600;
+	font-size: 9px;
+	letter-spacing: .8px;
+	left: 66%;
+	color: #579aef;
+	text-decoration: underline;
+	padding-bottom: 2px;
 }
 
-@media (max-width: 800px) {
-	.main {
-		left: 310px;
-	}
+.line {
+	position: relative;
+	top: 38px;
+	width: 70%;
+	height: 1px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #333;
+	opacity: 0.2;
+}
+
+.features {
+	position: absolute;
+	top: 10%;
+	left: 0;
+	width: 70%;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 90%;
+}
+.ok {
+	position: relative;
+	width: 48.5%;
+	height: 38px;
+	top: 30px;
+	border: 2px solid #579aef;
+    font-family: suir;
+    text-transform: uppercase;
+    font-weight: 800;
+    background: none;
+    color: #579aef;
+    font-size: 11px;
+    letter-spacing: 0.4px;
+    outline: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 6px;
+
+}
+
+.ok:hover {
+  background: #579aef;
+  color: #fff;
+  box-shadow: 1px 1px 1px #579aef;
+
+}
+
+.num-trucks {
+	position: relative;
+	width: 100%;
+	height: 20%;
+	
+	top: 60px;
+
+}
+.h {
+	font-family: suir;
+    top: 0;
+    font-weight: 600;
+    font-size: 11px;
+    position: relative;
+    left: 0px;
+    color: #404047;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+}
+input {
+	position: relative;
+	top: 10px;
+	height: 38px;
+	text-transform: uppercase;
+
+	width: 100%;
+	font-size: 11px;
+	font-family: suir;
+	box-sizing: border-box;
+	padding-left: 16px;
+	font-weight: 600;
+}
+#dis {
+	position: absolute;
+    width: 100%;
+    height: 55px;
+    bottom: 0px;
+    background: #579aef;
+    border: none;
+    font-family: suir;
+    font-weight: 600;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-top: 2px solid #579aef;
+}
+.lfill {
+	position: relative;
+	width: 100%;
+	height: 20%;
+	
+	top: 110px;
+
 }

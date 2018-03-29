@@ -57,30 +57,16 @@
 	font-family: suir;
 	position: relative;
 	left:16%;
-	top: 6%;
-	font-size: 16px;	
+	 font-size: 1.25vw;
 	letter-spacing: 0.3px;
 	font-weight: 600;
 	color: #404047;
 	text-transform: capitalize;
-}
-.sub {
-	position: absolute;
-	top: 6.73%;
-	font-family: suir;
-	font-weight: 600;
-	font-size: 9px;
-	letter-spacing: .8px;
-	left: 66%;
-	color: #579aef;
-	text-decoration: underline;
-	padding-bottom: 2px;
-}
-
+}	
 .line {
 	position: relative;
-	top: 38px;
-	width: 70%;
+	margin-top: 1.4vh;
+	width: 74%;
 	height: 1px;
 	left: 50%;
 	transform: translateX(-50%);
@@ -89,54 +75,52 @@
 }
 
 .features {
-	position: absolute;
+	position: relative;
 	top: 10%;
 	left: 0;
-	width: 70%;
+	width: 74%;
 	left: 50%;
 	transform: translateX(-50%);
 	height: 90%;
 }
 .ok {
-	position: relative;
 	width: 48.5%;
-	height: 38px;
-	top: 30px;
+	height: 5.95vh;
 	border: 2px solid #579aef;
     font-family: suir;
     text-transform: uppercase;
     font-weight: 800;
     background: none;
     color: #579aef;
-    font-size: 11px;
+    font-size: 0.8vw;
     letter-spacing: 0.4px;
     outline: none;
     transition: all 0.5s;
     cursor: pointer;
-    margin-top: 6px;
+    margin-top: 4vh;
 
 }
 
 .ok:hover {
   background: #579aef;
   color: #fff;
-  box-shadow: 1px 1px 1px #579aef;
+  box-shadow: 1px 1px  1px #579aef;
 
 }
 
 .num-trucks {
-	position: relative;
 	width: 100%;
 	height: 20%;
+	margin-top: 3vh;
 	
-	top: 60px;
+	
 
 }
 .h {
 	font-family: suir;
     top: 0;
     font-weight: 600;
-    font-size: 11px;
+    font-size: 0.8vw;
     position: relative;
     left: 0px;
     color: #404047;
@@ -145,28 +129,31 @@
 }
 input {
 	position: relative;
-	top: 10px;
-	height: 38px;
+	top: 1.8vh;
+	height: 6vh;
 	text-transform: uppercase;
-
+	border: none;
+	border: 1px solid #ddd;
 	width: 100%;
-	font-size: 11px;
+	font-size: 0.8vw; 
 	font-family: suir;
 	box-sizing: border-box;
-	padding-left: 16px;
+	padding-left: 1vw;
 	font-weight: 600;
+	outline: none;
+	transition: all 0.5s;
 }
 #dis {
 	position: absolute;
     width: 100%;
-    height: 55px;
+    height: 8vh;
     bottom: 0px;
     background: #579aef;
     border: none;
     font-family: suir;
     font-weight: 600;
     color: #fff;
-    font-size: 15px;
+    font-size: 2.3vh;
     letter-spacing: 1px;
     outline: none;
     cursor: pointer;
@@ -174,10 +161,24 @@ input {
     border-top: 2px solid #579aef;
 }
 .lfill {
-	position: relative;
+	margin-top: 6vh;
 	width: 100%;
 	height: 20%;
-	
-	top: 110px;
+	 
 
+}
+.tp {
+	position: absolute;
+	width: 100%;
+	top: 43%;
+	transform: translateY(-50%);
+
+}
+
+input:hover {
+	border-color: #397aef;
+}
+
+input:active {
+	border-bottom-color: #397aef;
 }

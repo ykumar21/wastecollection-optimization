@@ -6,9 +6,9 @@
 		<link rel="stylesheet" href="styles/main.css">
 		<script src = "https://unpkg.com/sweetalert2@7.1.2/dist/sweetalert2.all.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet">
 	</head>
 	<style media="screen">
-
 	.console-log-div {
 		border: 1px solid gray;
 		padding: 5px 10px;
@@ -18,22 +18,52 @@
 	}
 	</style>
 		<body>
-		<div id="map"></div>
 		<div class="main">
-			<div class="outputscreen">
-				<div class="txt">
 
-				</div>
+		<div class="con">
+		<div class="innerHeader"></div>
+
+			<div class="opt">
+			<div class="tp">
+				<div class="heading">Settings</div>
+			
+			<div class="line"></div>
+			<div class="features">
+				<div class="bts">
+				<button class = 'ok'>Save</button> <button class = 'ok'>Load </button>
 			</div>
-			<h1>garbage</h1>
-			<i>Click on map to add site</i>
-			<div class="markers"></div>
-<br>
-	No of trucks:  <input id = 'tr' placeholder =" No of trucks" name=""><br><br>
-				Truck Capacity: <input id = 'tc' placeholder ="Truck Capacity" name=""><br><br>
-			<button id = 'dis'>Calulate </button><br><br>
 
+			<div class="num-trucks">
+				<div class="h">Truck Info</div>
+				<input id = 'tr' type="text" placeholder = "No. of trucks">
+				<span class="underline"></span>
+				<input id = 'tc 'type="text" placeholder = "Truck Capacity" style="top: 20px;">
+				<span class="underline"></span>
+			</div>
+
+			<div class="lfill">
+				<div class="h">Landfill Index</div>
+				<input id = 'tr' type="text" placeholder = "Set Landfill index">
+				
+			</div>
+			</div>
+			
+			</div>
+			
+			
+			
+ 
+			<button id = 'dis'>Calulate </button><br><br> 
+	
+	
+		
 		</div>
+	
+		<div id="map"></div>
+		<div class="output"></div>
+		</div>
+		
+			
 		<script></script>
 		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 		<script src="js/script.js"></script>
@@ -43,6 +73,5 @@
 
 	</body>
 	<script>
-
 	</script>
 	</html>
